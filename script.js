@@ -13,14 +13,14 @@ function createGrid(gridSize) {
     container.appendChild(div);
 
     div.addEventListener("mouseover", () => {
-      div.style.backgroundColor = "blue";
+      div.style.backgroundColor = "#707793";
       console.log("test");
     });
   }
 }
 
 function checkSize() {
-  let size = prompt("size?");
+  let size = prompt("Enter the Grid Size:\n(Between 1-100)");
   return size;
 }
 
