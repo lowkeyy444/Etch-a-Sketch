@@ -3,6 +3,8 @@
 #div-container {
   display: flex;
   flex-wrap: wrap;
+  border: 10px solid black;
+  border-radius: 20px;
 }
 
 .div {
@@ -16,7 +18,7 @@
   display: flex;
   justify-content: center;
   font-family: "Playwrite SK", cursive;
-  font-size: 40px;
+  font-size: 35px;
   background-color: #707793;
   border-radius: 20px;
   color: #04fbc1;
@@ -40,17 +42,20 @@
   background-color: #707793;
   margin-top: auto;
   margin-bottom: auto;
+  border: 10px solid #04fbc1;
 }
 #btn,
 #clear,
 #reset {
-  height: 30px;
+  height: 35px;
   width: 160px;
   font-size: 15px;
   border-radius: 50px;
   font-weight: 100;
   color: #363a47;
+  font-weight: 500;
   background-color: #04fbc1;
+  font-family: "Playwrite SK", cursive;
 }
 
 html {
