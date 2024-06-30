@@ -1,14 +1,4 @@
-function checkSize() {
-  let size = prompt("size?");
-  return size;
-}
-
-const btn = document.querySelector("#btn");
-
-btn.addEventListener("click", () => {
-  let gridSize = checkSize();
-  console.log(gridSize);
-
+function createGrid(gridSize) {
   const container = document.querySelector("#div-container");
   container.innerHTML = "";
   container.setAttribute("style", "width: 600px; height:600px");
@@ -27,4 +17,19 @@ btn.addEventListener("click", () => {
       console.log("test");
     });
   }
+}
+
+function checkSize() {
+  let size = prompt("size?");
+  return size;
+}
+
+const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", () => {
+  let gridSize = checkSize();
+  console.log(gridSize);
+  createGrid(gridSize);
 });
+
+createGrid(30);
