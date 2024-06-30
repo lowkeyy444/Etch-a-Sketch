@@ -9,7 +9,7 @@
   border: 1px solid black;
   background-color: #3bba9c;
   box-sizing: border-box;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 #heading {
@@ -41,15 +41,16 @@
   margin-top: auto;
   margin-bottom: auto;
 }
-#btn {
+#btn,
+#clear,
+#reset {
   height: 30px;
   width: 160px;
   font-size: 15px;
   border-radius: 50px;
-  font-weight: bold;
-
+  font-weight: 100;
+  color: #363a47;
   background-color: #04fbc1;
-  box-shadow: 100px;
 }
 
 html {

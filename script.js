@@ -1,3 +1,4 @@
+let gridSize = 30;
 function createGrid(gridSize) {
   const container = document.querySelector("#div-container");
   container.innerHTML = "";
@@ -13,8 +14,13 @@ function createGrid(gridSize) {
     container.appendChild(div);
 
     div.addEventListener("mouseover", () => {
-      div.style.backgroundColor = "#707793";
+      div.style.backgroundColor = "#363a47";
       console.log("test");
+
+      const reset = document.querySelector("#clear");
+      reset.addEventListener("click", () => {
+        div.style.backgroundColor = "#3bba9c";
+      });
     });
   }
 }
@@ -32,4 +38,10 @@ btn.addEventListener("click", () => {
   createGrid(gridSize);
 });
 
-createGrid(30);
+const reset = document.querySelector("#reset");
+
+reset.addEventListener("click", () => {
+  createGrid(gridSize);
+});
+
+createGrid(gridSize);
