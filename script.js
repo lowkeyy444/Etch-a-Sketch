@@ -1,3 +1,4 @@
+let rainbowmode = false;
 let gridSize = 30;
 function createGrid(gridSize) {
   const container = document.querySelector("#div-container");
@@ -14,13 +15,17 @@ function createGrid(gridSize) {
     container.appendChild(div);
 
     div.addEventListener("mouseover", () => {
-      div.style.backgroundColor = "#363a47";
-      console.log("test");
+      if (rainbowmode) {
+        div.style.backgroundColor = random_rgba();
+      } else {
+        div.style.backgroundColor = "#363a47";
+        console.log("rainbow test");
+      }
+    });
 
-      const reset = document.querySelector("#clear");
-      reset.addEventListener("click", () => {
-        div.style.backgroundColor = "#3bba9c";
-      });
+    const reset = document.querySelector("#clear");
+    reset.addEventListener("click", () => {
+      div.style.backgroundColor = "#3bba9c";
     });
   }
 }
@@ -42,6 +47,21 @@ const reset = document.querySelector("#reset");
 
 reset.addEventListener("click", () => {
   createGrid(gridSize);
+  rainbowmode = false;
 });
 
+const rainbow = document.querySelector("#rainbow");
+rainbow.addEventListener("click", () => {
+  rainbowmode = !rainbowmode;
+});
+
+function random_rgba() {
+  return (
+    "#" +
+    Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, "0")
+      .toUpperCase()
+  );
+}
 createGrid(gridSize);
